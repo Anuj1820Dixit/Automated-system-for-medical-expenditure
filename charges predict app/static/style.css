@@ -1,0 +1,111 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fad0c4);
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+    background-attachment: fixed;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h3 {
+    text-align: center;
+    color: #27ae60;
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Form Container */
+.container {
+    max-width: 450px;
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    margin: 50px auto;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+input, select {
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 4px 8px rgba(108, 99, 255, 0.3);
+}
+
+/* Button Styling */
+.btn {
+    background: linear-gradient(120deg, #6c63ff, #88a2ff);
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.2s ease, background 0.3s;
+    box-shadow: 0px 4px 10px rgba(108, 99, 255, 0.4);
+}
+
+.btn:hover {
+    background: linear-gradient(120deg, #5a52e0, #7389ff);
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px rgba(108, 99, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}

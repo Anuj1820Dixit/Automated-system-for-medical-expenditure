@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Charges Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Medical Charges Prediction</h2>
+        <form method="POST" action="/predict">
+            <input type="hidden" name="bmi" value="{{ bmi }}">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+            
+            <label for="children">Number of Children:</label>
+            <input type="number" id="children" name="children" placeholder="Number of children" required>
+            
+            <label for="smoker">Smoker:</label>
+            <select name="smoker" id="smoker" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="region">Region:</label>
+            <select name="region" id="region" required>
+                <option value="northwest">Northwest</option>
+                <option value="southeast">Southeast</option>
+                <option value="southwest">Southwest</option>
+                <option value="northeast">Northeast</option>
+            </select>
+            
+            <button type="submit" class="btn">Predict Charges</button>
+        </form>
+
+        {% if predicted_charges %}
+            <h3>Predicted Charges: ${{ predicted_charges }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
