@@ -47,6 +47,18 @@ Each row contains the following fields:
 - Standardized feature scaling is applied to improve model convergence.
 ---
 
+## 🚀 Deployment
+
+The model is deployed as a **Django web application** with a two-step user interface:
+
+1. **Step 1:** Calculate BMI by entering height and weight on the landing page.  
+2. **Step 2:** Enter additional details — region, age, number of children, and smoking status — on the next page.  
+3. **Prediction:** Based on the inputs, the system predicts the **annual medical charges** for the user and displays the result.
+
+This deployment allows **interactive user input**, making the prediction process accessible and user-friendly for ACME Insurance’s customer onboarding.
+
+---
+
 ## ✅ Interpretability
 
 The model prioritizes **transparency**:
