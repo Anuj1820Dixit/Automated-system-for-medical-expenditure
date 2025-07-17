@@ -67,6 +67,5 @@ The model prioritizes **transparency**:
 
 ---
 
-## 📁 Project Structure
 
 
